@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<meta charset="UTF-8">	
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+  	<meta name="viewport" content="width=device-width, initial-scale=1">		
+	<link rel="stylesheet" href="css/normalize.css">	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">	
+	<link rel="stylesheet" href="assets/slick-1.8.0/slick/slick.css">
+	<link rel="stylesheet" href="assets/fancybox-master/dist/jquery.fancybox.min.css" />	
+	<link rel="stylesheet" href="css/style.css">	
+	<title>Компания «Спец-склад»</title>	
+</head>
+
+<body>
+	<header class="header">	
+		<div class="tm__hider"></div>
+		<div class="header-top" id="header-top">
+			<ul class="top-menu">	
+				<li class="top-menu__element"><a href="index.html">Главная</a></li>	
+				<li class="top-menu__element"><a href="services.html">Услуги</a></li>	
+				<li class="top-menu__element"><a href="category.html">Оплата</a></li>	
+				<li class="top-menu__element"><a href="sklad-mat.html">Важно знать</a></li>	
+				<li class="top-menu__element"><a href="contacts.html">Контакты</a></li>	
+			</ul>	
+			<ul class="user-menu">	
+				<li class="user-menu__element user-menu__element_fav"><a href="#">Избранное</a></li>	
+				<li class="user-menu__element user-menu__element_reg"><a href="#">Регистрация</a></li>	
+				<li class="user-menu__element user-menu__element_enter"><a href="#">Вход</a></li>	
+			</ul>	
+		</div>	
+		<div class="header-middle-placeholder"></div>	
+		<div class="header-middle">	
+			<a href="/" class="top-logo"></a>	
+			<div class="top-phones">	
+				<p><a href="tel:8 (800) 770-0447">8 (800) 770-0447</a></p>	
+			</div>	
+			<div class="top-time">	
+				<p>8<sup>00</sup> - 23<sup>00</sup></p>	
+				<p>без выходных</p>	
+			</div>		
+			<div class="header-sale">	
+				<a href="#">Распродажи <br>и акции</a>	
+			</div>			
+			<div class="header-cart">	
+				<a href="#">Ваша корзина <br>пуста</a>	
+			</div>	
+		</div>
+
+		<div class="header-bottom">	
+			<ul class="user-menu header-bottom__user-menu">	
+				<li class="user-menu__element user-menu__element_fav"><a href="#">Избранное</a></li>	
+				<li class="user-menu__element user-menu__element_reg"><a href="#">Регистрация</a></li>	
+				<li class="user-menu__element user-menu__element_enter"><a href="#">Вход</a></li>	
+			</ul>
+			<ul class="breadcrumb header-bottom_breadcrumb">
+				<li class="breadcrumb-items"><a href="index.html"><span>Главная</span></a></li>
+				<li class="breadcrumb-items"><a href="category.html"><span>Каталог</span></a></li>
+				<li class="breadcrumb-items"><a href="sklad-mat.html"><span>Сельскохозяйственная техника</span></a></li>
+				<li class="breadcrumb-items active"><a href="cart.html"><span>Японские мини-тракторы Б/У</span></a></li>
+			</ul>
+			<div class="header-search">	
+				<div class="header-search__inner">	
+					<div class="header-search__icon"></div>	
+					<input type="text" class="header-search__input" placeholder="Поиск...">	
+				</div>	
+			</div>			
+			<div class="catalog-menu">
+				<div class="catalog-menu__burger" onclick="showCatalog()">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="catalog-menu__title" onclick="showCatalog()"><span>Каталог</span></div>
+			</div>
+
+			<!-- Catalog menu -->
+			<div class="catalog-menu__wraper">
+				<div class="catalog-menu__inner">
+					<div class="catalog-menu__mobile-panel">
+						<a class="catalog-menu__mobile-back-link" href="#" onclick="subBack();return false"><span>&lt;&lt;&lt;</span> назад</a>
+					</div>
+					<div class="catalog-menu__list-cnt">						
+						<!-- Catalog menu list-->
+							
+						<!-- Catalog menu list-->
+						<ul class="cm-list cm-list_first" style="min-height: 567px;">									
+							<li class="cm-list__item cm-list__item_sub">
+								<a href="#" onclick="openSub(this);return false;">Обувь</a>
+								<ul class="cm-list cm-list_second" style="min-height: 567px;">
+									<li class="cm-list__item"><a href="/catalog/pantolety/">Пантолеты</a></li>
+									<li class="cm-list__item"><a href="/catalog/slippers/">Тапочки</a></li>
+									<li class="cm-list__item cm-list__item_sub">
+										<a href="#" onclick="openSub(this);return false;">Туфли</a>
+										<ul class="cm-list cm-list_third" style="min-height: 567px;">
+											<li class="cm-list__item"><a href="/catalog/women-s-shoes/"> Туфли Женские</a></li>								
+											<li class="cm-list__item"><a href="/catalog/shoes-mens/">Туфли Мужские</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>		
+							<li class="cm-list__item"><a href="/catalog/dresses/">Платья</a></li>
+							<li class="cm-list__item"><a href="/catalog/pants/">Штаны</a></li>
+							<li class="cm-list__item"><a href="/catalog/underwear/">Нижнее белье</a></li>
+							<li class="cm-list__item"><a href="/catalog/t-shirts/">Футболки</a></li>				
+							<li class="cm-list__item"><a href="/catalog/sportswear/">Спортивная Одежда</a></li>															
+							<li class="cm-list__item cm-list__item_sub">
+								<a href="#" onclick="openSub(this);return false;">Аксессуары</a>
+								<ul class="cm-list cm-list_second" style="min-height: 567px;">
+									<li class="cm-list__item cm-list__item_sub">
+										<a href="#" onclick="openSub(this);return false;">Ремни</a>
+										<ul class="cm-list cm-list_third" style="min-height: 567px;">
+											<li class="cm-list__item"><a href="/catalog/women-s-belts/">Ремни Женские</a></li>
+											<li class="cm-list__item"><a href="/catalog/men-s-belts/">Ремни Мужские</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>				
+						</ul>
+						<!-- /Catalog menu list-->
+						<!-- Menu mini-catalog -->
+						<div class="items-list catalog-menu__items-list">
+							<a href="#" class="items-list__element items-list__element_mini-catalog">
+								<div class="items-list__lucky">ВО Повезло</div>
+								<div class="tems-list__e-cart"></div>
+								<div class="tems-list__e-favor"></div>
+								<div class="tems-list__e-discount">-10%</div>
+								<div class="items-list__element-image"></div>
+								<p class="items-list__element-title items-list__element-title_mute">Шпатлевка</p>
+								<p href="#" class="items-list__element-name">Шпатлевка финишная Knauf</p>
+								<p class="items-list__element-add-info">25 кг</p>
+								<div class="items-list__element-separator"></div>
+								<p class="items-list__element-old-price"><span>от 790 ₽</span></p>
+								<p class="items-list__element-price">от 720 ₽</p>
+							</a>
+							<a href="#" class="items-list__element items-list__element_mini-catalog">
+								<div class="items-list__lucky">ВО Повезло</div>
+								<div class="tems-list__e-cart"></div>
+								<div class="tems-list__e-favor"></div>
+								<div class="tems-list__e-discount">-10%</div>						
+								<div class="items-list__element-image"></div>
+								<p class="items-list__element-title items-list__element-title_mute">Шпатлевка</p>
+								<p class="items-list__element-name">Шпатлевка финишная Knauf</p>
+								<p class="items-list__element-add-info">25 кг</p>
+								<div class="items-list__element-separator"></div>
+								<p class="items-list__element-old-price"><span>от 790 ₽</span></p>
+								<p class="items-list__element-price">от 720 ₽</p>
+							</a>							
+						</div>
+						<!-- /Menu mini-catalog -->
+					</div>
+					<a href="#" class="catalog-menu__baner"></a>					
+				</div>
+			</div>
+			<!-- /Catalog menu -->		
+		</div>
+	</header>
+	<!-- cart -->
+	<section class="section section_full-width">
+		<aside class="section__sidebar">
+			<ul class="sidebar-top">
+				<li class="active"><a href="#cont-1">Категории</a></li>
+				<li><a href="#cont-2">Подбор</a></li>
+			</ul>
+			<ul class="sidebar-nav sidebar_content" id="cont-1">
+				<li class="active"><a href="category.html">Сельскохозяйственная техника</a></li>
+				<li><a href="category.html">Складская техника</a></li>
+				<li><a href="category.html">Строительная техника</a></li>
+				<li><a href="category.html">Автомобили</a></li>
+				<li><a href="category.html">Прицепы</a></li>
+				<li><a href="category.html">Коммунальная техника</a></li>
+				<li><a href="category.html">Лесозаготовительная техника</a></li>
+				<li><a href="category.html">Навесное оборудование</a></li>
+				<li><a href="category.html">Резина</a></li>
+				<li><a href="category.html">Запчасти</a></li>
+			</ul>
+			<ul class="podbor sidebar_content" id="cont-2">
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sed facere libero culpa. Perspiciatis quasi iste quod iusto est esse suscipit error, quas cupiditate, molestias possimus atque non soluta assumenda.</li>
+				<li>Animi aliquam quia eum quidem quos. Quia consequuntur, earum nulla omnis sequi, distinctio dicta esse ipsam a, aliquam perspiciatis! Ea amet, aliquam qui in, fuga unde. Doloremque harum, delectus sapiente.</li>
+				<li>Quis modi illo minima nulla voluptatibus perferendis saepe fugiat atque repudiandae eos mollitia quam tenetur iure asperiores omnis dignissimos ut illum veniam provident sequi quae, sint error laboriosam tempore dolores!</li>
+			</ul>
+		</aside>
+		<div class="section__content section__content_with-sidebar">
+			<ul class="breadcrumb">
+				<li class="breadcrumb-items"><a href=""><span>Главная</span></a></li>
+				<li class="breadcrumb-items"><a href=""><span>Каталог</span></a></li>
+				<li class="breadcrumb-items"><a href=""><span>Сельскохозяйственная техника</span></a></li>
+				<li class="breadcrumb-items active"><a href=""><span>Японские мини-тракторы Б/У</span></a></li>
+			</ul>
+			<h2 class="section__title">ISEKI TX155D</h2>
+			<div class="cm-top">
+				<ul class="cm-top_list">
+					<li class="cm-top_lot">Лот: <span>1203149</span></li>
+					<li class="cm-top_place">Местоположение: <span>Славянск на Кубани</span></li>
+					<li class="cm-top_list-soc">
+						<span class="cm-top__soc-before">Поделиться:</span>
+						<div class="cm-top__soc">							
+							<a href="#" class="cm-top__soc-item cm-top__soc-item_fb"></a>
+							<a href="#" class="cm-top__soc-item cm-top__soc-item_tw"></a>
+							<a href="#" class="cm-top__soc-item cm-top__soc-item_g"></a>
+							<a href="#" class="cm-top__soc-item cm-top__soc-item_ok"></a>
+							<a href="#" class="cm-top__soc-item cm-top__soc-item_vk"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="cart-main">
+				<div class="cm_gallery">
+					<div class="cm_gallery-big" id="cm_gallery-big">
+					</div>
+					<div class="cm_gallery-tools">
+						<a href="#" class="cm_gallery-tools_zoom" id="cm_gallery-tools_zoom"></a>
+						<a href="#" class="cm_gallery-tools_comment"></a>
+					</div>
+					<div class="cm_gallery-sm_container">
+						<div class="cm-gallery-sm_inner">
+							<div class="cm-gallery-sm"></div>
+						</div>
+						<div class="cm-gallery-sm_inner">
+							<div class="cm-gallery-sm"></div>
+						</div>
+						<div class="cm-gallery-sm_inner">
+							<div class="cm-gallery-sm"></div>
+						</div>
+						<div class="cm-gallery-sm_inner">
+							<div class="cm-gallery-sm"></div>
+						</div>
+						<div class="cm-gallery-sm_inner">
+							<div class="cm-gallery-sm"></div>
+						</div>
+						<div class="cm-gallery-sm_inner">
+							<div class="cm-gallery-sm"></div>
+						</div>
+					</div>
+				</div>
+				<div class="cm_info">
+					<div class="cm_info-top">
+						<div class="cm_info-top_left">
+							<p class="cm_info-top__text">Стоимость:</p>
+							<p class="cm_info-top__price">275 000</p>
+							<p class="cm_info-top__price-old">325 000</p>	
+							<div class="cm-checkbox">
+								<input type="checkbox" value="None" id="cm-checkbox" name="check" />
+								<label for="cm-checkbox"></label>
+
+							</div>
+							<span class="cm-checkbox_label">Сообщите о скидке</span> 
+
+						</div>
+						<div class="cm_info-top_right">
+							<a href="#" class="basket-button button-green"><span>В корзину</span></a>
+							<a href="#" class="cm_info-top_fast-buy">Купить в один клик!</a>
+						</div>
+						
+					</div>
+					
+
+					<ul class="cm_info-params">
+						<li class="cm_info-param">Страна производитель:<span> Япония</span></li>
+						<li class="cm_info-param">Марка:<span>Yanmar</span></li>
+						<li class="cm_info-param">Модель:<span>Ke-2D</span></li>
+						<li class="cm_info-param">Тип привода:<span>колесный, 4WD</span></li>
+						<li class="cm_info-param">Мощность:<span>12 л.с.</span></li>
+						<li class="cm_info-param">Наработка:<span>312 м\ч.</span></li>
+						<li class="cm_info-param">ГУР:<span>нет</span></li>
+						<li class="cm_info-param">Тип топлива:<span>дизель</span></li>
+						<li class="cm_info-param">Размер колес:<span>передние- 4.5-10;     задние 7-16</span></li>
+						<li class="cm_info-param">Комплектация: <span>почвенная фреза</span></li>
+						<li class="cm_info-param">Ширина фрезы:<span>110 см</span></li>
+						<li class="cm_info-param">Вес: <span>500 кг.</span></li>
+						<li class="cm_info-param">Гидроцилиндр горизонтального наклона:<span>нет</span></li>
+						<li class="cm_info-param">ВОМ(вал отбора мощности): <span>2 скорости</span></li>
+						<li class="cm_info-param">Коробка передач:<span>механика</span></li>
+						<li class="cm_info-param">Количество цилиндров:<span>3 цилиндра</span></li>
+						<li class="cm_info-param">Тип навесного устройства:<span>4-х точечное</span></li>
+						<li class="cm_info-param">Блокировка дифференциала:<span>есть</span></li>
+						<li class="cm_info-param">Покраска: <span>покрашен</span></li>
+					</ul>
+				</div>				
+			</div>
+			<div class="cart_extra-links">
+				<div class="cart_extra-link"><a href="#"><span>Перезвоните мне</span></a></div>
+				<div class="cart_extra-link"><a href="#"><span>Сравнение</span></a></div>
+				<div class="cart_extra-link"><a href="#"><span>Расчет доставки</span></a></div>
+				<div class="cart_extra-link"><a href="#"><span>В избранное</span></a></div>
+			</div>
+			<div class="cart_extra-infos">
+				<ul class="tabs">
+					<li class="tab-link current" data-tab="tab-1">Информация <span></span</li>
+					<li class="tab-link" data-tab="tab-2">Отзывы <span></span></li>
+					<li class="tab-link" data-tab="tab-3">Гарантия <span></span></li>
+					<li class="tab-link" data-tab="tab-4">Сервис <span></span></li>
+					<li class="tab-link" data-tab="tab-5">Доставка <span></span></li>
+				</ul>
+
+				<div id="tab-1" class="tab-content current">
+					<p>Качественная подготовка стен к различным отделочным работам заключается в получении ровной, гладкой поверхности. Для этого необходимо грамотно выполнить грунтование и шпаклевание. Шпаклевание – нетрудное занятие. Здесь главное соблюдать порядок действий и уметь правильно обращаться со строительным инструментом. Как правильно шпаклевать стены самостоятельно не прибегая к помощи специалистов мы рассмотрим в данной статье.</p>
+					<p>Качественная подготовка стен к различным отделочным работам заключается в получении ровной, гладкой поверхности. Для этого необходимо грамотно выполнить грунтование и шпаклевание. Шпаклевание – нетрудное занятие. Здесь главное соблюдать порядок действий и уметь правильно обращаться со строительным инструментом. Как правильно шпаклевать стены самостоятельно не.</p>
+				</div>
+				<div id="tab-2" class="tab-content">
+					 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+				<div id="tab-3" class="tab-content">
+					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+				</div>
+				<div id="tab-4" class="tab-content">
+					Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+				<div id="tab-5" class="tab-content">
+					Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+			</div>
+			<div class="cart_extra-options">
+				<h2 class="section__title">Дополнительные опции</h2>
+				<div class="cart_eo-inner">
+					<div class="cart_ep-list">
+						<div class="cart_ep-list-item">
+							<div class="cm-checkbox">
+								<input type="checkbox" value="None" id="cm-checkbox2" name="check" />
+								<label for="cm-checkbox2"></label>
+							</div>
+							<div class="cm-checkbox_label">Резина SUMITOMO <span class="cart_eo-decor"></span><span>10 000</span></div>
+						</div>
+						<div class="cart_ep-list-item">
+							<div class="cm-checkbox">
+								<input type="checkbox" value="None" id="cm-checkbox3" name="check" />
+								<label for="cm-checkbox3"></label>
+							</div>
+							<div class="cm-checkbox_label">Резина SUMITOMO <span class="cart_eo-decor"></span><span>10 000</span></div>
+						</div>
+						<div class="cart_ep-list-item">
+							<div class="cm-checkbox">
+								<input type="checkbox" value="None" id="cm-checkbox4" name="check" />
+								<label for="cm-checkbox4"></label>
+							</div>
+							<div class="cm-checkbox_label">Резина SUMITOMO <span class="cart_eo-decor"></span><span>10 000</span></div>
+						</div>
+						<div class="cart_ep-list-item">
+							<div class="cm-checkbox">
+								<input type="checkbox" value="None" id="cm-checkbox5" name="check" />
+								<label for="cm-checkbox5"></label>
+							</div>
+							<div class="cm-checkbox_label">Резина SUMITOMO <span class="cart_eo-decor"></span><span>10 000</span></div>
+						</div>
+						<div class="cart_ep-list-item">
+							<div class="cm-checkbox">
+								<input type="checkbox" value="None" id="cm-checkbox6" name="check" />
+								<label for="cm-checkbox6"></label>
+							</div>
+							<div class="cm-checkbox_label">Резина SUMITOMO <span class="cart_eo-decor"></span><span>10 000</span></div>
+						</div>
+						<div class="cart_ep-list-item">
+							<div class="cm-checkbox">
+								<input type="checkbox" value="None" id="cm-checkbox7" name="check" />
+								<label for="cm-checkbox7"></label>
+							</div>
+							<div class="cm-checkbox_label">Резина SUMITOMO <span class="cart_eo-decor"></span><span>10 000</span></div>
+						</div>
+					</div>
+					<div class="cart_eo-total">
+						<p class="cart_eo-total_header">Итого:</p>
+						<p class="cart_eo-total_price">160 000</p>
+						<a href="#" class="basket-button basket-button_mini button-red"><span>В корзину</span></a>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</section>
+	<!-- /Cart -->	
+
+	<!-- Related section -->	
+	<section class="section section__related">
+		<h2 class="section__title">Похожие товары</h2>	
+		<div class="r__hider"></div>			
+		<div class="r-list" id="related-main">
+			<div class="items-list r-list__inner" id="related-scroll">
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>						
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image r-list__item__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>						
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image r-list__item__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>						
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image r-list__item__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>						
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image r-list__item__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>						
+				<a href="#" class="items-list__element r-list__item">	
+					<div class="items-list__element-image r-list__item__element-image"></div>	
+					<div class="tems-list__e-cart"></div>	
+					<div class="tems-list__e-favor"></div>	
+					<p class="items-list__element-title">Японские мини-тракторы</p>	
+					<p href="#" class="items-list__element-name">ISEKI TX155D</p>	
+					<p class="items-list__element-add-info">15 л.с.</p>	
+					<p class="items-list__element-old-price"><span>325 000 ₽</span></p>	
+					<p class="items-list__element-price">275 000 ₽</p>	
+				</a>
+			</div>
+		</div>
+
+		<div class="scroll scroll_related">
+
+			<div class="scroll__bar scroll__bar-related " data-target="related-scroll"></div>
+
+		</div>		
+
+	</section>
+
+	<!-- /Related section -->
+
+
+	<!-- Recommended section -->	
+	<section class="section section__recommended">
+		<h2 class="section__title">Вы смотрели</h2>	
+		<div class="rc__hider"></div>			
+		<div class="rc-list" id="recommended-main">
+			<div class="rc-list__inner" id="recommended-scroll">
+				<div class="rc-list__item">
+					<div class="rc-list__item-dscr">
+						<div class="rc-list__item-title">Спецтехника</div>
+						<div class="rc-list__item-name">BRP Can-am</div>
+						<div class="rc-list__item-price">от 790 000 р.</div>
+					</div>
+					<div class="rc-list__item-img">
+						<div class="rc-list__item-img-hider"></div>
+					</div>
+				</div>
+
+				<div class="rc-list__item">
+					<div class="rc-list__item-dscr">
+						<div class="rc-list__item-title">Спецтехника</div>
+						<div class="rc-list__item-name">BRP Can-am</div>
+						<div class="rc-list__item-price">от 790 000 р.</div>
+					</div>
+					<div class="rc-list__item-img">
+						<div class="rc-list__item-img-hider"></div>
+					</div>
+				</div>
+
+				<div class="rc-list__item">
+					<div class="rc-list__item-dscr">
+						<div class="rc-list__item-title">Спецтехника</div>
+						<div class="rc-list__item-name">BRP Can-am</div>
+						<div class="rc-list__item-price">от 790 000 р.</div>
+					</div>
+					<div class="rc-list__item-img">
+						<div class="rc-list__item-img-hider"></div>
+					</div>
+				</div>
+
+				<div class="rc-list__item">
+					<div class="rc-list__item-dscr">
+						<div class="rc-list__item-title">Спецтехника</div>
+						<div class="rc-list__item-name">BRP Can-am</div>
+						<div class="rc-list__item-price">от 790 000 р.</div>
+					</div>
+					<div class="rc-list__item-img">
+						<div class="rc-list__item-img-hider"></div>
+					</div>
+				</div>
+
+				<div class="rc-list__item">
+					<div class="rc-list__item-dscr">
+						<div class="rc-list__item-title">Спецтехника</div>
+						<div class="rc-list__item-name">BRP Can-am</div>
+						<div class="rc-list__item-price">от 790 000 р.</div>
+					</div>
+					<div class="rc-list__item-img">
+						<div class="rc-list__item-img-hider"></div>
+					</div>
+				</div>
+
+				<div class="rc-list__item">
+					<div class="rc-list__item-dscr">
+						<div class="rc-list__item-title">Спецтехника</div>
+						<div class="rc-list__item-name">BRP Can-am</div>
+						<div class="rc-list__item-price">от 790 000 р.</div>
+					</div>
+					<div class="rc-list__item-img">
+						<div class="rc-list__item-img-hider"></div>
+					</div>
+				</div>
+
+				<div class="rc-list__item">
+					<div class="rc-list__item-dscr">
+						<div class="rc-list__item-title">Спецтехника</div>
+						<div class="rc-list__item-name">BRP Can-am</div>
+						<div class="rc-list__item-price">от 790 000 р.</div>
+					</div>
+					<div class="rc-list__item-img">
+						<div class="rc-list__item-img-hider"></div>
+					</div>
+				</div>
+
+				<div class="rc-list__item">
+					<div class="rc-list__item-dscr">
+						<div class="rc-list__item-title">Спецтехника</div>
+						<div class="rc-list__item-name">BRP Can-am</div>
+						<div class="rc-list__item-price">от 790 000 р.</div>
+					</div>
+					<div class="rc-list__item-img">
+						<div class="rc-list__item-img-hider"></div>
+					</div>
+				</div>																
+			</div>
+		</div>
+
+		<div class="scroll scroll_recommended">
+
+			<div class="scroll__bar" data-target="recommended-scroll"></div>
+
+		</div>		
+
+	</section>
+
+	<!-- /Recommended section -->
+
+	<!-- Map section -->
+	<section class="section section__map">
+			<div id="map"></div>
+	</section>
+	<!-- /Map section -->
+
+	<!-- Footer Menu -->
+	<section class="section section__footermenu">
+		<ul class="footermenu-list__burger" onclick="showFooterMenu();">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<ul class="footermenu-list">
+			<li><a href="#"><span>Видео</span></a></li>
+			<li><a href="#"><span>Вакансии</span></a></li>
+			<li><a href="#"><span>Наши клиенты</span></a></li>
+			<li><a href="#"><span>Подать объявление</span></a></li>
+			<li><a href="#"><span>Филиалы</span></a></li>
+			<li><a href="#"><span>Реклама на сайте</span></a></li>
+			<li><a href="#"><span>Безопасность</span></a></li>
+			<li><a href="#"><span>Помощь</span></a></li>
+		</ul>
+	</section>
+	<!-- /Footer Menu -->
+
+	<!-- Footer -->		
+
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="footer__flex">
+				<div class="footer__contacts">
+					<a href="/" class="footer__logo"></a>
+					<h5 class="footer__title">Контакты</h5>
+					<div class="footer__phone">
+						<p><a href="tel:8007700447">8 (800) 770-0447</a></p>
+					</div>
+					<div class="footer__time">	
+						<p>8<sup>00</sup> - 23<sup>00</sup></p>	
+						<p>без выходных</p>
+					</div>
+					<div class="footer__mail">
+						<p><a href="mailto:info@spec-sklad.ru">info@spec-sklad.ru</a></p>
+					</div>
+					
+					<h5 class="footer__title">Реквизиты</h5>
+					<div class="footer__requisites">
+						<p><a href="#">Скачать *.pdf</a></p>
+					</div>	
+				</div>
+
+				<div class="footer__catalog">
+					<div class="footer_catalog-div">
+						<div class="footer_catalog-div_inner">
+							<h5 class="footer__title_red">Сельскохозяйственная техника</h5>
+							<a href="#" class="footer__catalog-item">Минитрактор</a>	
+							<a href="#" class="footer__catalog-item">Трактор</a>	
+							<a href="#" class="footer__catalog-item">Комбайн</a>
+						</div>
+						<div class="footer_catalog-div_inner">
+							<h5 class="footer__title_red">Складская техника</h5>	
+							<a href="#" class="footer__catalog-item">Вилочные погрузчики</a>
+							<a href="#" class="footer__catalog-item">Подъемные столы</a>	
+							<a href="#" class="footer__catalog-item">Гидролифты</a>	
+							<a href="#" class="footer__catalog-item">Гидроманипуляторы</a>	
+							<a href="#" class="footer__catalog-item">Автокраны</a>
+						</div>						
+					</div>
+					<div class="footer_catalog-div">
+						<div class="footer_catalog-div_inner">
+							<h5 class="footer__title_red">Строительная техника</h5>	
+							<a href="#" class="footer__catalog-item">Экскаваторы</a>	
+							<a href="#" class="footer__catalog-item">Бульдозеры</a>	
+							<a href="#" class="footer__catalog-item">Автогрейдеры</a>	
+							<a href="#" class="footer__catalog-item">Бетономешалки</a>	
+							<a href="#" class="footer__catalog-item">Бетононасосы</a>
+						</div>
+						<div class="footer_catalog-div_inner">
+							<h5 class="footer__title_red">Автомобили</h5>
+							<a href="#" class="footer__catalog-item">Легковые</a>	
+							<a href="#" class="footer__catalog-item">Легкий <br> коммерческий <br>транспорт</a>	
+							<a href="#" class="footer__catalog-item">Грузовые</a>
+						</div>
+					</div>					
+					<div class="footer_catalog-div">
+						<div class="footer_catalog-div_inner">
+							<h5 class="footer__title_red">Прицепы</h5>
+							<a href="#" class="footer__catalog-item">Прицепы</a>	
+							<a href="#" class="footer__catalog-item">Полуприцепы</a>
+						</div>
+						<div class="footer_catalog-div_inner">
+							<h5 class="footer__title_red">Коммунальная техника</h5>
+							<h5 class="footer__title_red">Лесозаготовительная техника</h5>
+							<h5 class="footer__title_red">Навесное оборудование</h5>
+							<h5 class="footer__title_red">Резина</h5>
+							<h5 class="footer__title_red">Запчасти</h5>
+						</div>
+					</div>
+					<div class="footer_catalog-footer">
+						<div><p class="footer_catalog-footer_copyright">© 2014 - 2017 Спец-склад</p></div>
+						<div>
+							<div class="footer__soc">
+								<a href="#" class="footer__soc-item footer__soc-item_fb"></a>
+								<a href="#" class="footer__soc-item footer__soc-item_tw"></a>
+								<a href="#" class="footer__soc-item footer__soc-item_g"></a>
+								<a href="#" class="footer__soc-item footer__soc-item_ok"></a>
+								<a href="#" class="footer__soc-item footer__soc-item_vk"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div id="large-img_modal" class="large-img_modal">
+		<span class="li_close">X</span>
+		<img src="" alt="" id="li_img">
+	</div>
+	<!-- /Footer -->	
+
+	<script src="assets/jquery-3.2.1.min.js"></script>
+	<script src="assets/slick-1.8.0/slick/slick.min.js"></script>
+	<script src="assets/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="assets/iscroll.js"></script>
+	<script src="assets/fancybox-master/dist/jquery.fancybox.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script src="js/main.js"></script>
+	
+	<script>
+		ymaps.ready(function () {
+		    var myMap = new ymaps.Map('map', {
+		            center: [45.269162, 38.165643],
+		            zoom: 10
+		        }, {
+		            searchControlProvider: 'yandex#search'
+		        }),
+
+		        // Создаём макет содержимого.
+		        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+		            '<div style="background:#000; color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+		        ),
+
+		        skladPlacemark = new ymaps.Placemark([45.269162, 38.165643], {
+		            hintContent: 'Собственный значок метки с контентом',
+		            balloonContent: '<div class="map-content"><img src="images/footer-logo.png"></div>',
+		            iconContent: '<div style="background: #000; overflow:hidden;"></div>'
+		        });
+		        myMap.balloon.open(
+						// Позиция балуна
+						[45.269162, 38.165643], {
+						contentBody: '<div  class="map-content"><img src="images/footer-logo.png"><p>353810, Россия, Краснодарский край, Красноармейский район, х.Трудобеликовский, ул. Ленина, 217</p></div>'
+					}, {
+		               // Опции балуна. В данном примере указываем, что балун не должен иметь кнопку закрытия.
+		                closeButton: false
+		        });
+		        myMap.behaviors.disable('scrollZoom'); 
+		    myMap.geoObjects
+		        .add(skladPlacemark)
+		});
+	</script>
+	<!-- <div class="map-content" style="background: #000; overflow:hidden; color:#fff;"><img src="images/footer-logo.png"></div> -->
+
+<!-- 	<script>
+	$(document).ready(function(){
+		var activeSlideText = getElementsByTagName('data-texton');
+		var noActiveSlideText = getElementsByTagName('data-textoff');
+		var sliderDotList = getElementsByClassName('slick-dots');
+		var sliderElements = sliderDotList.children;
+
+		for (var i =  0; i <= sliderElements.length; i++) {
+
+			console.log(sliderElements[i]);
+			/*sliderElements[i].innerHTML = "<p class='top-slider__active-text'>"+activeSlideText[i]+"</p>";
+			sliderElements[i].innerHTML = "<p class='top-slider__noactive-text'>"+noActiveSlideText[i]+"</p>";*/
+		};
+	});
+
+</script> -->
+</body>
+</html>
